@@ -7,7 +7,7 @@ const defaultHtml = `<html>
         <script src="https://grcodeclub.gr/programming/js/menu.js"></script>
         <script src="https://grcodeclub.github.io/javascript/add-elements/head.js"></script>
     </head>
-    <body class="basic"> 
+    <body class="programing"> 
         <div class="container">
             <div id="add_headder_and_menu"></div><script src="https://grcodeclub.gr/javascript/add-elements/headder_and_menu.js"></script>
             <div class="Text"> <!--ΑΡΧΗ Text-->
