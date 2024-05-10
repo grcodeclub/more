@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.gr/file/background/4.png"/>
+        <meta id="grcodeclub" property="og:title" content="GrCode Club">
+        <meta name="description" content="Greek Code Club">
+        <script src="https://grcodeclub.gr/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/js/head.js"></script>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body class="basic">
+        <div class="container">
+                <div id="add_headder_and_menu"></div><script src="https://grcodeclub.gr/js/headder_and_menu.js"></script>
+            
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                <a href="https://grcodeclub.gr/post/create/"><img src="https://grcodeclub.gr/files-page/graphics/back.png" class="logo_back"></a>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->                    
+                    <h1 class="title">Δημιουργία Post</h1>
+                    <a id="downloadButton" href="#" download="preview.html">Κατέβασμα HTML</a>
+                    <div id="container">
+                        <div id="input">
+                            <h2>Εισαγωγή HTML</h2>
+                            <textarea id="htmlInput" placeholder="Γράψτε το HTML σας εδώ..."><h1 class="title">My Title</h1></textarea>
+                        </div>
+                        <div id="output">
+                            <h2>Προεπισκόπηση</h2>
+                            <iframe id="htmlOutput"></iframe>
+                        </div>
+                        <script src="./create.js"></script> <!-- Περιέχει τον JavaScript κώδικα -->
+                    </div>
+                </div><!-- Τέλος Background Κειμένου-->
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+
+    </body>
+</html>
