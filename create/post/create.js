@@ -1,4 +1,4 @@
-// Προεπιλεγμένος HTML κώδικας
+// Προεπιλεγμένος HTML κώδικας 
 const defaultHtml = `<html>
     <head>
         <meta property="og:image" content="https://i.ibb.co/Dw600xC/1.png"/>
