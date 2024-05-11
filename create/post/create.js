@@ -73,19 +73,31 @@ function applyTextFile(url) {
         });
 }
 
-// Προσθέστε ακροατή για το κουμπί download
 document.getElementById('downloadButton').addEventListener('click', (event) => {
-    // Αποκτήστε το HTML περιεχόμενο της προεπισκόπησης
-    const iframeDocument = document.getElementById('htmlOutput').contentWindow.document;
-    const previewContent = iframeDocument.documentElement.outerHTML;
+    // Πάρτε τον κώδικα που δίνει ο χρήστης από το textarea
+    const userCode = document.getElementById('htmlInput').value;
 
-    // Δημιουργήστε ένα Blob από το περιεχόμενο της προεπισκόπησης
-    const blob = new Blob([previewContent], { type: 'text/html' });
+    // Συνδυάστε τον κώδικα του χρήστη με τον προεπιλεγμένο HTML κώδικα
+    const combinedHtml = defaultHtml.replace('</div> <!--ΤΕΛΟΣ Text-->', `${userCode}</div> <!--ΤΕΛΟΣ Text-->`);
 
-    // Δημιουργήστε μια διεύθυνση URL για το Blob
+    // Δημιουργία ενός Blob από τον συνδυασμένο κώδικα
+    const blob = new Blob([combinedHtml], { type: 'text/html' });
+
+    // Δημιουργία μιας διεύθυνσης URL για το Blob
     const url = URL.createObjectURL(blob);
 
-    // Ενημερώστε το href του downloadButton με τη διεύθυνση URL
-    const downloadButton = document.getElementById('downloadButton');
-    downloadButton.href = url;
+    // Ορισμός του όνομα του αρχείου
+    const filename = 'page.html';
+
+    // Δημιουργία ενός link για τη λήψη του αρχείου
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+
+    // Προσθήκη του link στον DOM και κλικ σε αυτόν για να γίνει η λήψη
+    document.body.appendChild(link);
+    link.click();
+
+    // Αφαίρεση του link από τον DOM
+    document.body.removeChild(link);
 });
