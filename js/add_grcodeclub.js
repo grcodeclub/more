@@ -11,5 +11,5 @@ function addRow(column1, column2) {
 }
 
 addRow("PC build", "2024-05-10");
-addRow("SIM", "2024-1-10")
+addRow("<a href='https://grcodeclub.gr/post/mobile/sim'>SIM</a>", "2024-1-10")
 addRow("NFC", "2024-2-25");
