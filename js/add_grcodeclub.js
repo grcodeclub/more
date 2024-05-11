@@ -14,6 +14,6 @@ function addRow(column1, column2) {
     cell2.textContent = column2;
 }
 
-addRow("PC build", "2024-05-10");
+addRow("<a href='https://grcodeclub.gr/post/hardware/build'>PC build</a>", "2024-05-10");
 addRow("<a href='https://grcodeclub.gr/post/mobile/sim'>SIM</a>", "2024-1-10");
-addRow("NFC", "2024-2-25");
+addRow("<a href='https://grcodeclub.gr/post/mobile/nfc'>NFC</a>", "2024-2-25");
