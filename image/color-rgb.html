@@ -1,0 +1,401 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <meta property="og:image" content="https://grcodeclub.github.io/file/background/RGB.jpg"/>
+        <meta property="og:title" content="GrCode Club | Το χρωματικό Μοντέλο RGB">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/more/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/head.js"></script>
+        <style>
+
+            body{
+                background-image: url('https://grcodeclub.github.io/image/files-page/RGB.jpg');
+                margin: 0;
+                font-family: "Arial";
+                background-size: cover;
+                background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+                background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+            }
+
+        </style>
+    </head>
+    
+    
+    <body> 
+    
+<div class="container">
+        <div id="add_headder_and_menu"></div><script src="https://grcodeclub.gr/js/headder_and_menu.js"></script>      
+    
+        <div class="Text"> <!--ΑΡΧΗ Text-->
+           <a href="https://grcodeclub.gr/image"><img src="https://grcodeclub.github.io//files-page/graphics/back.png" class="logo_back"></a>
+            <div class="Text_bg">
+                <h1 style="font-size: 50px; color: white; text-align:center;  background-color: rgba(12, 81, 228, 0.494);
+                border-top-left-radius: 10px; border-top-right-radius: 10px">Το χρωματικό Μοντέλο RGB </h1>
+
+                <div style="font-size: 20px; margin-left: 15px; margin-right: 15px;">
+                    <p>
+                        Το χρησιμοποιούμε όταν σχεδιάζουμε και αποτελείται από 3 χρώματα τα οποία όταν τα συνδικάσουμε μπορούμε να δημιουργήσουμε και τα υπόλοιπά χρώματα.
+                        <ol>
+                            <li>Κόκκινο</lli>
+                            <li>Πράσινο</li>
+                            <li>Μπλε</li>
+                        </ol>
+                        Όλες οι οθόνες και οι κάρτες γραφικών υποστηρίζουν χρώμα 24-bit, που αφιερώνει 8bit για το κάθε χρώμα.
+                        Έτσι, κάθε ένα από τα R, G, B μπορεί να πάρει 256 διαφορετικές τιμές, από το 0 μέχρι το 255.Κάθε χρώμα έχει 2<sup>8</sup> αποχρώσεις, όλοι οι πιθανοί συνδυασμοί με τα τρία χρώματα είναι 2<sup>24</sup> διαφορετικά χρώματα
+
+                    </p>
+
+                    <p>
+                    <h2>Το RGB και Εικόνα</h2>
+Κάθε εικόνα που αναπαριστάτε στο χρωματικό μοντέλο RGB, που αποτελούνται από τρεις εικόνες, μια για κάθε χρώμα. Όταν αυτές αποστέλνονται σε μια οθόνη συνδυάζονται μεταξύ τους για να δημιουργήσουν μια συνθέτη έγχρωμη εικόνα.
+<br> <h2>Πίνακας RGB</h2>
+Παρακάτω βλέπουμε έναν πίνακα οπού αριστερά είναι το χρώμα και δεξιά είναι η τιμή του RBG. Οι έντονες τιμές είναι αυτές που αλλάζουν και συγκεκριμένα που αυξάνονται ανά 25
+                    </p>
+                </div>
+                
+                <table style="font-size: 20px;">
+                    <tr>
+                        <td>XΡΩMA</td>
+                        <td>RGB</td>
+                        <td>XΡΩMA</td>
+                        <td>RGB</td>
+                        <td>XΡΩMA</td>
+                        <td>RGB</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(0,0,0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>0</b>,0,0) </td>
+                    <td style="background-color: rgb(0, 0, 0); width: 100px; "></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>0</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>0</b>)</td>
+                </tr>
+
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(25, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>25</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 25, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>25</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 25); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>25</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(50, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>50</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 50, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>50</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 50); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>50</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(75, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>75</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 75, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>75</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 75); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>75</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(100, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>100</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 100, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>100</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 100); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>100</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(125, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>125</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 125, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>125</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 125); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>125</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(150, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>150</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 150, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>150</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 150); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>150</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(175, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>175</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 175, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>175</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 175); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>175</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(200, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>200</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 200, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>200</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 200); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 0, <b>200</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(225, 0, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px; background-color: rgb(255, 0, 0);color: white;">rgb(<b>225</b>, 0, 0)</td>
+                    <td style="background-color: rgb(0, 225, 0); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;  background-color: rgb(0, 255, 0);color: white;">rgb(0, <b>225</b>, 0)</td>
+                    <td style="background-color: rgb(0, 0, 225); width: 100px; "></td>
+                    <td style="padding-left: 10px; padding-right: 30px; background-color: rgb(0, 0, 225);color: white;">rgb(0, 0, <b>225</b>)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 25, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>25</b>, 0)</td>
+                        <td style="background-color: rgb(25, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>25</b>, 255, 0)</td>
+                        <td style="background-color: rgb(25, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>25</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 50, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>50</b>, 0)</td>
+                        <td style="background-color: rgb(50, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>50</b>, 255, 0)</td>
+                        <td style="background-color: rgb(50, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>50</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 75, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>75</b>, 0)</td>
+                        <td style="background-color: rgb(75, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>75</b>, 255, 0)</td>
+                        <td style="background-color: rgb(75, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>75</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 100, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>100</b>, 0)</td>
+                        <td style="background-color: rgb(100, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>100</b>, 255, 0)</td>
+                        <td style="background-color: rgb(100, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>100</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 125, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>125</b>, 0)</td>
+                        <td style="background-color: rgb(125, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>125</b>, 255, 0)</td>
+                        <td style="background-color: rgb(125, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>125</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 150, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>150</b>, 0)</td>
+                        <td style="background-color: rgb(150, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>150</b>, 255, 0)</td>
+                        <td style="background-color: rgb(150, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>150</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 175, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>175</b>, 0)</td>
+                        <td style="background-color: rgb(175, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>175</b>, 255, 0)</td>
+                        <td style="background-color: rgb(175, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>175</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 200, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>200</b>, 0)</td>
+                        <td style="background-color: rgb(200, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>200</b>, 255, 0)</td>
+                        <td style="background-color: rgb(200, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>200</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 225, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>225</b>, 0)</td>
+                        <td style="background-color: rgb(225, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>225</b>, 255, 0)</td>
+                        <td style="background-color: rgb(225, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>225</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>255</b>, 0)</td>
+                        <td style="background-color: rgb(255, 255, 0); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>255</b>, 255, 0)</td>
+                        <td style="background-color: rgb(255, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>255</b>, 0, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 25); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>25</b>)</td>
+                        <td style="background-color: rgb(0, 255, 25); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>25</b>)</td>
+                        <td style="background-color: rgb(0, 25, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>25</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 50); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>50</b>)</td>
+                        <td style="background-color: rgb(0, 255, 50); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>50</b>)</td>
+                        <td style="background-color: rgb(0, 50, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>50</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 75); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>75</b>)</td>
+                        <td style="background-color: rgb(0, 255, 75); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>75</b>)</td>
+                        <td style="background-color: rgb(0, 75, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>75</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 100); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>100</b>)</td>
+                        <td style="background-color: rgb(0, 255, 100); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>100</b>)</td>
+                        <td style="background-color: rgb(0, 100, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>100</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 125); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>125</b>)</td>
+                        <td style="background-color: rgb(0, 255, 125); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>125</b>)</td>
+                        <td style="background-color: rgb(0, 125, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>125</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 150); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>150</b>)</td>
+                        <td style="background-color: rgb(0, 255, 150); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>150</b>)</td>
+                        <td style="background-color: rgb(0, 150, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>150</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 175); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>175</b>)</td>
+                        <td style="background-color: rgb(0, 255, 175); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>175</b>)</td>
+                        <td style="background-color: rgb(0, 175, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>175</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 200); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>200</b>)</td>
+                        <td style="background-color: rgb(0, 255, 200); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>200</b>)</td>
+                        <td style="background-color: rgb(0, 200, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>200</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 225); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>225</b>)</td>
+                        <td style="background-color: rgb(0, 255, 225); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>225</b>)</td>
+                        <td style="background-color: rgb(0, 225, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>225</b>, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 0, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, 0, <b>255</b>)</td>
+                        <td style="background-color: rgb(0, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, 255, <b>255</b>)</td>
+                        <td style="background-color: rgb(0, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(0, <b>255</b>, 255)</td>
+                    </tr>                    
+                    <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(255, 25, 255); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>25</b>, 255)</td>
+                    <td style="background-color: rgb(25, 255, 255); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>25</b>, 255, 255)</td>
+                    <td style="background-color: rgb(25, 255, 255); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>25</b>, 255, 255)</td>
+                </tr>
+                <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 50, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>50</b>, 255)</td>
+                        <td style="background-color: rgb(50, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>50</b>, 255, 255)</td>
+                        <td style="background-color: rgb(50, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>50</b>, 255, 255)</td>
+                    </tr>
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 75, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>75</b>, 255)</td>
+                        <td style="background-color: rgb(50, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>75</b>, 255, 255)</td>
+                        <td style="background-color: rgb(50, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>75</b>, 255, 255)</td>
+                    </tr>                              
+                    <tr style="background-color: white; color: black;">
+                        <td style="background-color: rgb(255, 100, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>100</b>, 255)</td>
+                        <td style="background-color: rgb(100, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>100</b>, 255, 255)</td>
+                        <td style="background-color: rgb(100, 255, 255); width: 100px;"></td>
+                        <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>100</b>, 255, 255)</td>
+                    </tr>    
+                    <tr style="background-color: white; color: black;">
+                    <td style="background-color: rgb(255, 125, 255); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>125</b>, 255)</td>
+                    <td style="background-color: rgb(125, 255, 255); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>125</b>, 255, 255)</td>
+                    <td style="background-color: rgb(125, 255, 255); width: 100px;"></td>
+                    <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>125</b>, 255, 255)</td>
+                </tr>
+
+            <tr style="background-color: white; color: black;">
+                <td style="background-color: rgb(255, 150, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>150</b>, 255)</td>
+                <td style="background-color: rgb(150, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>150</b>, 255, 255)</td>
+                <td style="background-color: rgb(150, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>150</b>, 255, 255)</td>
+            </tr>
+            <tr style="background-color: white; color: black;">
+                <td style="background-color: rgb(255, 175, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>175</b>, 255)</td>
+                <td style="background-color: rgb(175, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>175</b>, 255, 255)</td>
+                <td style="background-color: rgb(175, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>175</b>, 255, 255)</td>
+            </tr>
+            <tr style="background-color: white; color: black;">
+                <td style="background-color: rgb(255, 200, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>200</b>, 255)</td>
+                <td style="background-color: rgb(200, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>200</b>, 255, 255)</td>
+                <td style="background-color: rgb(200, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>200</b>, 255, 255)</td>
+            </tr>
+            <tr style="background-color: white; color: black;">
+                <td style="background-color: rgb(255, 225, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>225</b>, 255)</td>
+                <td style="background-color: rgb(225, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>225</b>, 255, 255)</td>
+                <td style="background-color: rgb(225, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>225</b>, 255, 255)</td>
+            </tr>                             
+            <tr style="background-color: white; color: black;">
+                <td style="background-color: rgb(255, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(255, <b>255</b>, 255)</td>
+                <td style="background-color: rgb(255, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>255</b>, 255, 255)</td>
+                <td style="background-color: rgb(255, 255, 255); width: 100px;"></td>
+                <td style="padding-left: 10px; padding-right: 30px;">rgb(<b>255</b>, 255, 255)</td>
+            </tr>
+
+            
+            
+            
+                
+        </table>             </div>
+    
+        </div> <!--ΤΕΛΟΣ Text-->
+    
+    </div> <!--ΤΕΛΟΣ container-->
+        
+        <!-- Footer -->
+        <footer id="add_footer"></footer><script src="https://grcodeclub.github.io/javascript/add-elements/footer.js"></script>
+    </body>
+</html>
