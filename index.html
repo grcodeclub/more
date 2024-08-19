@@ -1,28 +1,30 @@
 
 <html>
     <head>
-        <meta property="og:image" content="https://grcodeclub.gr/file/background/3.png"/>
-        <meta property="og:title" content="GrCode Club | Γλώσσα προγραμματισμού C">
-        <script src="https://grcodeclub.gr/js/jquery.js"></script>
-        <script src="https://grcodeclub.gr/programming/js/menu.js"></script>
-        <script src="https://grcodeclub.github.io/js/head.js"></script>
-        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <meta property="og:image" content="https://grcodeclub.github.io/file/background/1.jpg"/>
+        <meta property="og:title" content="Λεξικό Όρων Πληροφορικής">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/javascript/add-elements/head.js"></script>
     </head>
 
-    <body class="basic">
-        <div class="container">
-            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.gr/js/headder_and_menu.js"></script>
-            <div class="Text"> <!--Αρχή Κειμένου-->
-                <a href="https://grcodeclub.gr/more/"><img src="https://grcodeclub.gr/files-page/graphics/back.png" class="logo_back"></a>
-                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
-                    <h1 class="title">Δημοσιεύσεις<br>
-                    <div  class="search"><input type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div></h1>
 
-                    <table id="table" class="style2" style="max-width: 60%;">  <thead><tr><th>Τίτλος</th><th>Ημερομηνία </th></tr></thead>
-                        <tbody>  </tbody> </table>
-                    <script src="./js/add_grcodeclub.js"></script>
-                     <script src="https://grcodeclub.gr/javascript/tables/sort._2_columnsjs"></script>
-                    <script src="https://grcodeclub.gr/javascript/search/search_table_row_cells_0.js"></script>
+    <body class="basic">
+        <div class="container-notmenu">
+            <div id="add_headder_and_menu"></div><script src="./header.js"></script>                
+            <div class="Text-notmenu"> <!--Αρχή Κειμένου-->
+                <div class="text_bg" > <!-- Αρχή Background Κειμένου-->
+                    <h1 class="title">Δημοσιεύσεις<br><div><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση Τίτλου" id='searchInput'/>
+                        <div><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση Συγγραφέα" id='searchInputAuthor'/></div>
+                        <div><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση Κατηγορία" id='searchInputCategory'/></div></h1>
+                        <table id="table" class="style2">
+                        <tr id="title-table"><td>Τίτλος</td> <td>Κατηγορία</td> <td>Συγγραφέας</td> <td>Σύντομη Περιγραφή</td></tr>
+                        <tr id="title-table"><td>Build</td> <td>Hardware</td> <td>GrCode Club</td> <td>-</td></tr>
+                        <tr id="title-table"><td>NFC</td> <td>Mobile</td> <td>GrCode Club</td> <td>-</td></tr>
+                        <tr id="title-table"><td>SIM</td> <td>Mobile</td> <td>GrCode Club</td> <td>-</td></tr>
+                    </table>
+                    <div class="pagination" id="pagination"></div>
+                     <script src="./js/search-tables-pages.js"></script>
+
                 </div><!-- Τέλος Background Κειμένου-->
             </div> <!--Τέλος Κειμένου-->
 
