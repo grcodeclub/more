@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <meta property="og:image" content="https://i.ibb.co/Dw600xC/1.png"/>
+        <meta property="og:title" content="GRCODE CLUB">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/prism.css">
+        <script src="https://grcodeclub.github.io/javascript/prism.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it@12/dist/markdown-it.min.js"></script>    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://grcodeclub.gr/programming/js/menu.js"></script>
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/header_and_footer.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/markdown.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/main.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/forms.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/text.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/table.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/layout.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/list.css">
+        <link rel="stylesheet" href="https://grcodeclub.github.io/css/body.css">
+        <link rel='icon' type='image/png' href='https://grcodeclub.github.io/file/logo/black_logo.png'>
+    </head>
+    <body class="programming"> 
+    
+<div class="container">
+        <section class="show_desktop"> <!--Αρχή Εμφάνιση Υπολογιστή-->
+            <div class="Header"> <!--Αρχή Επικεφαλίδας-->
+                <table>
+                    <tr style="border: none;">
+                        <td style="border: none;"><img src="https://grcodeclub.github.io/file/logo_and_graphic/logo.png" class="logo"/></td>
+                        <td style="border: none;"><h1 class="header_text"><a href="https://grcodeclub.github.io/"><span class="header_text">GrCode Club</span></a></h1></td>
+                    </tr>
+                </table> 
+            </div> <!--Τέλος Επικεφαλίδας-->
+       
+            <div class="Menu"> <!--Αρχή Menu-->
+                <div id="sidebarMenu" style="  overflow: auto;">
+                    <ul class="sidebarMenuInner"></ul>
+                </div>
+            </div><!--Τέλος Menu-->
+
+        </section> <!--Τέλος Εμφάνιση Υπολογιστή-->
+
+        <section class="show_mobile">  <!--Αρχή εμφάνιση σε κινητά-->
+            <div class="Header"> <!--Αρχή Επικεφαλίδας σε κινητά-->
+                <table>
+                    <tr style="border: none;">
+                        <td style="border: none;"><img src="https://grcodeclub.github.io/file/logo_and_graphic/logo.png" class="logo"/></td>
+                        <td style="border: none;"><h1 class="header_text"><a href="https://grcodeclub.github.io/"><span class="header_text">GrCode Club</span></a></h1></td>
+
+                    </tr>
+                </table> 
+            </div> <!--Τέλος Επικεφαλίδας σε κινητά -->
+            <div>
+                    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+                    <label for="openSidebarMenu" class="sidebarIconToggle">
+                        <div class="spinner diagonal part-1"></div>
+                        <div class="spinner horizontal"></div>
+                        <div class="spinner diagonal part-2"></div>
+                    </label>
+                    <div id="sidebarMenu">
+                        <ul class="sidebarMenuInner"></ul>
+                    </div>
+                </div>
+        </section> <!--Τέλος εμφάνιση σε κινητά-->
+
+    
+    
+        <div class="Text"> <!--ΑΡΧΗ Text-->
+            <br><br><br>
+            <div class="Text_bg">
+                <h1 class="title" style="border: none;">Markdown Preview</h1>
+                <p><a class="link" href="https://grcodeclub.github.io/programming/markdown.html">Markdown εντολές</a> </p>
+                <div class="markdown-container">
+                    <!-- Εδώ θα προβληθεί το Markdown -->
+                </div>
+                
+                <textarea id="markdown-input" rows="10" cols="80" style="margin: 10px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.418); color: white; border: none;">
+# GrCode club
+            </textarea>
+            <div class="markdown-preview">
+                <br>
+                <h1 style="border: none;" class="highlight_blue">Προεπισκόπηση</h1>
+                <div class="markdown-preview-content"></div>
+            </div>
+            
+            <script>
+                const markdownInput = document.getElementById("markdown-input");
+                const markdownPreview = document.querySelector(".markdown-preview-content");
+        
+                function updateMarkdownPreview() {
+                    const markdownText = markdownInput.value;
+                    const md = window.markdownit({
+                        html: true // Ενεργοποίηση της υποστήριξης HTML tags
+                    });
+                    markdownPreview.innerHTML = md.render(markdownText);
+                    Prism.highlightAll(); // Μορφοποίηση του κώδικα με Prism
+                }
+        
+                markdownInput.addEventListener("input", updateMarkdownPreview);
+                updateMarkdownPreview();
+            </script>
+            </div> <!--ΤΕΛΟΣ Text_bg-->
+        </div> <!--ΤΕΛΟΣ Text-->
+    
+    </div> <!--ΤΕΛΟΣ container-->
+        
+        <!-- Footer -->
+        <footer>
+            <table class="add_footer"></table>
+            <script src="https://grcodeclub.github.io/javascript/footer.js"></script>       
+        </footer>
+    </body>
+</html>
