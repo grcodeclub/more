@@ -14,27 +14,15 @@
         <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
         <div class="Text"> <!--ΑΡΧΗ Text-->
             <div class="text_bg">
-                <h1 class="title">Εργαλεία 
-                <br><input type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></h1>
-            </h1>
-            <ul class="list">
-                <li><a href="https://regex101.com/" class="link_open" target="_blank">Regular expression</a></li>
-                <li><a href="https://grcodeclub.gr/more/tools/markdown.html" class="link_open" target="_blank">Markdown Preview</a></li>
-            </ul>
-            <ul class="list">
-                <li><a href="https://jodies.de/" class="link_open" target="_blank">IP Calculator / IP Subnetting</a></li>
-            </ul>
-        </ul>
-        <ul class="list">
-            <li><a href="https://www.photopea.com/" class="link_open" target="_blank">Photopea | Online Photo Editor</a></li>
-        </ul>
-    </ul>
-    <ul class="list">
-        <li><a href="https://grcodeclub.gr/more/tools/convert" class="link_open" target="_blank">Μετατροπέας Hex, Binary, Decimal, Base64</a></li>
-    </ul>                    
-            <script src="https://grcodeclub.gr/javascript/search/search_list.js"></script>
-        </div>
-            </div>
+                <h1 class="title">Πρωτόκολλα<br><div class="search" id="search"><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div></h1>
+                <table id="table" class="style2">
+                   <tr id="title-table"><td>Εργαλείο</td><td>Δημιουργός</td><td>Περιγραφή</td></tr>
+                   <tr><td><a href="https://grcodeclub.gr/more/tools/convert" target="_blank">Convert</a></td><td>GrCode Club</td><td>Μετατροπέας Hex, Binary, Decimal, Base64</td></tr>
+                   <tr><td><a href="https://grcodeclub.gr/more/tools/markdown" target="_blank">Markdown</a></td><td>GrCode Club</td><td>Markdown Preview</td></tr>
+
+                </table>
+                <div class="pagination" id="pagination"></div>
+                     <script src="https://grcodeclub.gr/javascript/search/search-tables-pages.js"></script>
         </div> <!--ΤΕΛΟΣ Text-->
 
     </div> <!--ΤΕΛΟΣ container-->
