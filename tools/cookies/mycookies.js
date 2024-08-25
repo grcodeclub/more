@@ -40,4 +40,6 @@
         }
 
         // Φόρτωσε τα δεδομένα όταν φορτωθεί η σελίδα
-        document.addEventListener('DOMContentLoaded', populateTable);
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(populateTable, 9000); // Καθυστερεί την εκτέλεση κατά 1 δευτερόλεπτο
+});
