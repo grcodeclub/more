@@ -43,4 +43,9 @@ function populateTable() {
 }
 
 // Φόρτωσε τα δεδομένα όταν φορτωθεί η σελίδα
-document.addEventListener('DOMContentLoaded', populateTable);
+document.addEventListener('DOMContentLoaded', function() {
+    if (!window.tablePopulated) {
+        setTimeout(populateTable, 10000); // 10000 χιλιοστά του δευτερολέπτου = 10 δευτερόλεπτα
+        window.tablePopulated = true;
+    }
+});
