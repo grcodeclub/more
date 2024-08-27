@@ -1,32 +1,38 @@
 <html>
     <head>
-        <meta property="og:image" content="https://grcodeclub.github.io/file/background/pc1.jpg"/>
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/basic.png"/>
         <meta property="og:title" content="GRCODE CLUB | PC build">
-        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
-        <script src="https://grcodeclub.github.io/more/menu.js"></script>
-        <script src="https://grcodeclub.github.io/js/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <link rel="stylesheet" href="./styles.css">
         <style>
-            th, td {border: 0.5px solid;}
+            .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Προσθέτει μια ομαλή μετάβαση */
+}
+
+.arrow.down {
+    transform: rotate(-90deg); /* Δείχνει προς τα κάτω */
+}
+
+.arrow.up {
+    transform: rotate(-90deg); /* Δείχνει προς τα πάνω */
+}
+
         </style>
     </head>
     
     
-    <body class="basic" style="background-image: url('https://grcodeclub.github.io/file/background/pc1.jpg');"> 
+    <body class="basic"> 
     
-<div class="container">
-            <div class="Header"> <!--Αρχή Επικεφαλίδας-->
-                    <div class="layout">
-                    <div><img src="https://grcodeclub.github.io/file/logo_and_graphic/logo.png" class="logo"/></div>
-                    <div><h1 class="header_text"><a href="https://grcodeclub.github.io/"><span class="header_text">GrCode Club</span></a></h1></div>
-                </div> 
-            </div> <!--Τέλος Επικεφαλίδας-->
-       
-        <div class="Text"> <!--ΑΡΧΗ Text-->
-            <a href="https://grcodeclub.gr/more/"><img src="https://grcodeclub.github.io/file/logo_and_graphic/back.png" class="logo_back"></a>
-            <div class="Text_bg">
-                <h1 class="title">PC build</h1>
+        <div class="container-notmenu">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder.js"></script>
+            <div class="Text-notmenu"> <!--Αρχή Κειμένου-->
+                <a href="https://grcodeclub.gr/more/post"><h1 id="back_page"></h1></a> <script src="https://grcodeclub.github.io/js/add/back_page.js"></script>
+
+                <div class="text_bg" >
+                    <h1 class="title">PC build</h1>
                 <h2 style="text-align: center;">Τι θα χρειαστείς για το νέο σου PC build</h2>
-                <div class="dropcard"> <button class="showCardButton">➕ Επεξεργαστή (CPU)</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Επεξεργαστή (CPU)</button>
                 <div class="card-content">
                     <p>Όσο πιο μεγάλος ο αριθμός, τόσο πιο γρήγορος και με περισσότερους πυρήνες έρχεται ο επεξεργαστής.</p>
                     <p><u>Intel Επεξεργαστές</u></p>
@@ -35,7 +41,7 @@
                         Όσο πιο πολλοί πυρήνες υπάρχουν διαθέσιμοι, τόσο πιο γρήγορα και καλά θα αποδίδει ο υπολογιστής. Το ίδιο ισχύει και για τη συχνότητα GHz, η οποία μπορεί να φέρει μεγάλη διαφορά στην ταχύτητα των πυρήνων του επεξεργαστή. </p>
                     <p><u>Threads</u><br>Επιτρέπουν στον επεξεργαστή να εξυπηρετεί παράλληλα αρκετές εργασίες</p>
                 </div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Μητρική πλακέτα  (Motherboard)</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Μητρική πλακέτα  (Motherboard)</button>
                 <div class="card-content">
                     <p>Τι να προσέξεις</p>
                     <ol>
@@ -43,11 +49,11 @@
                         <li>Συμβατότητα Επεξεργαστή</li><li>Συμβατότητα Κάρτας Γραφικών</li><li>Υποστήριξη μνήμης RAM</li><li>Hard Drives</li><li>Μέγεθος</li><li>Μέγεθος</li>
                     </ol>
                 </div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Κάρτα γραφικών</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Κάρτα γραφικών</button>
                 <div class="card-content">
                 <p>Κάθε μητρική κάρτα έχει έναν αριθμό PCIe slots.Σε αυτές τις υποδοχές τοποθετούνται τα διάφορα περιφερειακά και ειδικότερα οι κάρτες γραφικών.</p>
                 </div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Μνήμες RAM</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Μνήμες RAM</button>
                 <div class="card-content"><p>Τι να προσέξεις</p>
                     <ol>
                         <li>Tο μέγιστο συνολικό μέγεθος της RAM που μπορούμε να βάλουμε στην μητρική.</li>
@@ -56,35 +62,33 @@
                     </ol>
                     <p>Μέγεθος RAM : 2GB,4GB,8GB,16GB,32GB,64GB,...</p>
                 </div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Σκληρό δίσκο</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Σκληρό δίσκο</button>
                 <div class="card-content">
                     <ol>
                         <li>HDD</li>
                         <li>SSD : Δεν έχουν μηχανικά μέρη με αποτέλεσμα να είναι αθόρυβοι και είναι πιο γρήγοροι</li>
                     </ol>
                 </div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Τροφοδοτικό</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Τροφοδοτικό</button>
                 <div class="card-content">
                     <p>Ο σκοπός είναι να πάρουμε ένα τροφοδοτικό το οποίο θα καλύπτει τις ενεργειακές ανάγκες του συστήματος.</p>
                     <p>Υπάρχουν αρκετά "PSU Calculators" στο internet</p>
                 </div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Κουτί για τον υπολογιστή</button>
+                <div class="dropcard"> <button class="showCardButton"> Κουτί για τον υπολογιστή</button>
                 <div class="card-content"></div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Ψύκτρα επεξεργαστή</button>
+                <div class="dropcard"> <button class="showCardButton">Ψύκτρα επεξεργαστή</button>
                 <div class="card-content"></div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Ανεμιστηράκια</button>
+                <div class="dropcard"> <button class="showCardButton">Ανεμιστηράκια</button>
                 <div class="card-content"></div></div>
-                <div class="dropcard"> <button class="showCardButton">➕ Περιφερειακά</button>
+                <div class="dropcard"> <button class="showCardButton"><span class="arrow">&#9654;</span> Περιφερειακά</button>
                 <div class="card-content">
                     <ol><li>Οθόνη</li><li>Πληκτρολόγιο</li><li>Ποντίκι</li><li>Ηχεία</li><li>UPS</li></ol>
                 </div></div>
 
            
                 
-                <script src="https://grcodeclub.github.io/js/dropdown-content.js"></script>
-
             </div> <!--ΤΕΛΟΣ Text-->
-    
+            </div>
     </div> <!--ΤΕΛΟΣ container-->
         
         <!-- Footer -->
