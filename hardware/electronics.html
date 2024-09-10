@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/basic.png"/>
+        <meta property="og:title" content="GRCODE CLUB | Ηλεκτρονική">
+        <script src="https://grcodeclub.github.io/js/add/data.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    </head>
+    <body> 
+    
+        <div class="container-notmenu">
+            <div id="add_headder"></div>
+            <div class="Text-notmenu"> <!--Αρχή Κειμένου-->
+                <a href="../"><h1 id="back_page"></h1></a>
+
+                <div class="text_bg" >
+                    <h1 class="title">Ηλεκτρονική<br><div class="search" id="search"><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div></h1>
+                     <table id="search_table_page">
+                         <tr id="title-table"><td>Όνομα</td> <td>Τύπος</td> <td>Περιγραφή</td></tr>
+                         <tr><td>Συνεχές Ρεύμα (DC)</td><td>\( I_{DC} = \frac{V}{R} \)</td><td>Ρεύμα σταθερής κατεύθυνσης και σταθερού μεγέθους.</td></tr>
+                         <tr><td>Εναλλασσόμενο Ρεύμα (AC)</td><td>\( I_{AC}(t) = I_0 \sin(\omega t) \)</td><td>Ρεύμα που αλλάζει κατεύθυνση και μέγεθος περιοδικά.</td></tr>
+                         <tr><td>Ρεύμα Φορτίου</td><td>\( I = \frac{dQ}{dt} \)</td><td>Ρεύμα που προκαλείται από τη μεταβολή του ηλεκτρικού φορτίου με τον χρόνο.</td></tr>
+                         <tr><td>Ρεύμα Βραχυκυκλώματος</td><td>Καμία εξίσωση</td><td>Μεγάλο ρεύμα που ρέει όταν τα άκρα ενός κυκλώματος συνδέονται άμεσα.</td></tr>
+                         <tr><td>Στατικό Ρεύμα</td><td>\( I = \frac{V_{static}}{R} \)</td><td>Ρεύμα που ρέει σε αγωγό λόγω στατικού ηλεκτρισμού.</td></tr>
+                         <tr><td>Φωτοηλεκτρικό Ρεύμα</td><td>\( I = q \cdot n \cdot A \)</td><td>Ρεύμα που παράγεται από την κίνηση ηλεκτρονίων λόγω φωτονίων σε φωτοβολταϊκά υλικά.</td></tr>
+                         <tr><td>Ρεύμα Πυκνωτή</td><td>\( I_C = C \frac{dV}{dt} \)</td><td>Ρεύμα που διαρρέει έναν πυκνωτή κατά τη φόρτιση ή αποφόρτιση.</td></tr>                       
+                         <tr><td>Αντίσταση</td><td>\( R = \frac{V}{I} \)</td><td>Ηλεκτρονικό εξάρτημα που περιορίζει τη ροή του ηλεκτρικού ρεύματος.</td>                        </tr>
+                         <tr><td>Δίοδος</td><td>\( I = I_s (e^{\frac{V}{nV_T}} - 1) \)</td><td>Επιτρέπει τη ροή του ρεύματος μόνο προς μία κατεύθυνση.</td></tr>
+                         <tr><td>Πυκνωτής</td><td>\( C = \frac{Q}{V} \)</td><td>Αποθηκεύει και απελευθερώνει ηλεκτρική ενέργεια.</td></tr>           
+                         <tr><td>Πηνίο</td><td>\( V = L \frac{dI}{dt} \)</td><td>Αποθηκεύει ενέργεια στο μαγνητικό του πεδίο.</td></tr>
+                         <tr><td>Τρανζίστορ (NPN)</td><td>\( I_C = \beta I_B \)</td><td>Ενισχύει σήματα ή λειτουργεί ως διακόπτης.</td></tr>
+                         <tr><td>Διακόπτης</td><td>Καμία εξίσωση</td><td>Ανοιγοκλείνει ένα κύκλωμα επιτρέποντας ή σταματώντας τη ροή του ρεύματος.</td></tr>
+                         <tr><td>LED</td><td>\( I = I_s (e^{\frac{V}{nV_T}} - 1) \)</td><td>Εκπέμπει φως όταν διέρχεται ρεύμα.</td></tr>
+                         <tr><td>Zener Δίοδος</td><td>\( V_Z \approx σταθερό \)</td><td>Επιτρέπει ρεύμα προς την ανάστροφη κατεύθυνση σε συγκεκριμένη τάση διάσπασης.</td></tr>
+                         <tr><td>Θερμίστορ</td><td>Καμία εξίσωση</td><td>Μεταβάλλει την αντίστασή του ανάλογα με τη θερμοκρασία.</td></tr>
+                         <tr><td>Φωτοαντίσταση (LDR)</td><td>Καμία εξίσωση</td><td>Αλλάζει την αντίστασή της ανάλογα με την ένταση του φωτός.</td></tr>                          
+                        </table>
+                     <div class="pagination" id="pagination"></div>                    
+                        </div>
+            </div>
+    </div> <!--ΤΕΛΟΣ container-->
+        
+        <!-- Footer -->
+       <footer id="addFooter"></footer>
+    </body>
+</html>
