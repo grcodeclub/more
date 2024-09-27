@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/basic.png"/>
-        <meta property="og:title" content="GrCode Club">
+        <meta property="og:title" content="GrCode Club | Δυναμική προσθήκη περιεχομένου στην HTML μέσω JavaScript">
         <script src="https://grcodeclub.github.io/js/add/data.js"></script>
         <script src="https://grcodeclub.github.io/more/create/js/menu.js"></script>
     </head>
@@ -22,7 +22,69 @@
                         αρχεία CSS, JavaScript και τα κοινά τμήματα HTML (όπως το header, menu και footer) χρησιμοποιώντας JavaScript. 
                         Με αυτόν τον τρόπο, μπορούμε να κάνουμε αλλαγές σε ένα μόνο σημείο, εξοικονομώντας χρόνο και διασφαλίζοντας τη 
                         συνοχή σε όλες τις σελίδες μας.</p>
-                     </div><!-- Τέλος Background Κειμένου-->
+
+                        <h3 class="highlight_black">Δυναμική προσθήκη CSS αρχείων</h3>
+                        <p>Αυτό το απόσπασμα κώδικα JavaScript είναι σχεδιασμένο για την δυναμική προσθήκη αρχείων CSS στο &lt;head&gt; 
+                            της HTML σελίδας. Ουσιαστικά, αντί να γίνεται χειροκίνητη εισαγωγή όλων των συνδέσμων CSS μέσα στο HTML 
+                            αρχείο, χρησιμοποιούμε την JavaScript για να φορτώσει τα αρχεία CSS όταν η σελίδα εκτελείται.</p>
+                            
+                        <div class="bg_preview">
+                            <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">const cssLinks = [
+    "https://grcodeclub.gr/website/css/grcodeclub/header_and_footer.css",
+    "https://grcodeclub.gr/website/css/grcodeclub/main.css",
+    // περισσότερα CSS URLs εδώ...
+];
+const head = document.head; // Βρίσκουμε το &lt;head> της HTML
+// Προσθήκη των αρχείων CSS δυναμικά
+cssLinks.forEach(linkUrl => {
+    const linkElement = document.createElement('link');
+    linkElement.rel = 'stylesheet';
+    linkElement.href = linkUrl;
+    head.appendChild(linkElement); // Προσθήκη στο &lt;head>
+});</code></pre></div></div>
+
+                        <h3 class="highlight_black">Δυναμική προσθήκη Meta Tags</h3>
+                        <p>Δημιουργούμε  και προσθέτουμε δυναμικά ένα στοιχείο &lt;meta> στο &lt;head> της HTML σελίδας, το οποίο είναι απαραίτητο για να διαμορφωθεί σωστά η προβολή της σε φορητές συσκευές.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
+metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
+metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');     // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
+document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο &lt;meta> στο &lt;head> του HTML εγγράφου </code></pre></div></div>
+
+
+                        <h3 class="highlight_black">Δυναμική προσθήκη JavaScript </h3>
+                        <p>Δημιουργούμε  και προσθέτουμε δυναμικά ένα στοιχείο &lt;javascript> στο  &lt;head> της HTML σελίδας.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">function addScript(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        document.head.appendChild(script); //  document.body.appendChild(script); αν θέλουμε να το βάλουμε στο body
+    }
+addScript('https://grcodeclub.gr/js/jquery.js');
+addScript('https://grcodeclub.gr/js/prism.js');</code></pre></div></div>
+                    <p>Πλεονεκτήματα:
+                        <ol>
+                            <li>Μπορείτε να φορτώνετε εξωτερικά αρχεία JavaScript δυναμικά, χωρίς να αγγίζετε το HTML.</li>
+                            <li>Βελτιώνει τη διαχείριση μεγάλων projects όπου απαιτείται η φόρτωση πολλών αρχείων JS.</li>
+                            <li>Γρήγορος τρόπος  για την ενσωμάτωση επιπλέον λειτουργιές  στη σελίδα σας.</li>
+                        </ol>
+                    </p>
+                    <p>Επειδή υπάρχουν συγκεκριμένα JavaScript αρχεία που θέλουμε να φορτώσουμε σε συγκεκριμένες περιπτώσεις, ελέγχουμε αν 
+                        υπάρχει το αντίστοιχο στοιχείο με το id ή την αντίστοιχη class. Αν το στοιχείο αυτό υπάρχει, τότε προχωράμε στη
+                         φόρτωση του JavaScript αρχείου. Με αυτόν τον τρόπο, αποφεύγουμε τη φόρτωση αρχείων JavaScript που δεν θα χρειαστούν 
+                         στις συγκεκριμένες σελίδες, βελτιώνοντας την απόδοση της εφαρμογής μας. </p>
+                         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}</code></pre></div></div>
+                     
+                         <h3 class="highlight_black">Δυναμική προσθήκη Menu</h3>
+                         <p>Το menu το προσθέτουμε δυναμικά ελέγχοντας το id που έχει το &lt;body></p>
+                         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
+if (document.body.id === 'programming') { addScript('https://grcodeclub.gr/js/menu/programming.js'); }
+if (document.body.id === 'basic') { addScript('https://grcodeclub.gr/js/menu/basic.js'); }</code></pre></div></div>
+                        <p>Τέλος ακόμα και το id στο <body> μπαίνει δυναμικά, με βάση τι ξεκινά το URL </p>
+                         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">if (currentURL.startsWith('https://grcodeclub.gr/system/')){document.body.id = 'system';}
+else if (currentURL.startsWith('https://grcodeclub.gr/system/android')){document.body.id = 'android';}
+else if (currentURL.startsWith('https://grcodeclub.gr/windows/')){document.body.id = 'windows';}
+else if (currentURL.startsWith('https://grcodeclub.gr/linux/')){document.body.id = 'linux';}
+else {document.body.id = 'basic';}</code></pre></div></div>
+                        </div><!-- Τέλος Background Κειμένου-->
             </div> <!--Τέλος Κειμένου-->
         </div> <!--Τέλος container-->
                <footer id="addFooter"></footer> <!-- Footer -->
