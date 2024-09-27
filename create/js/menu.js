@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
     var menuLinks = [
         '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
         '<li><a href="https://grcodeclub.gr/more/create/">Manual</a></li>',
@@ -13,4 +13,4 @@ $sidebarMenuInners.forEach(function($sidebarMenuInner) {
         $sidebarMenuInner.insertAdjacentHTML('beforeend', link);
     });
 });
-});
+};
