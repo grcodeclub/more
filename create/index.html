@@ -11,45 +11,57 @@
             <div class="Text"> <!--Αρχή Κειμένου-->
                 <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
                     <h1 class="title">Create GrCode Club</h1>
-                      <h2 style="margin: 5%; text-align: center;">
-                        Σκοπός του Create είναι να κατανοήσει ο χρηστής όλες τις λειτουργίες που έχουμε εισάγει στην ιστοσελίδα. 
-                        Επιπλέον θέλουμε να παρουσιάσουμε πληροφορίες για τον πως ενσωματώσαμε τις λειτουργίες στην ιστοσελίδα μας.
-                      </h2>
-                      <table id="table_page">
-                          <tr id="title-table"><td>Αρχείο / Λειτουργία </td> <td>Περιγραφή</td></tr>
-                          <tr><td>Cookies</td><td>Δημιουργήσαμε Cookies που ενεργοποιώντας ΑΝ το αποδεχτούμε.</td></tr>
-                          <tr><td>menu.js</td><td>Προσθέτουμε τα στοιχεία λίστας  που αφορά το Menu. </td></tr>
-                          <tr><td>Prism.js</td><td>Με το Prism μπορούμε να χρωματίσουμε των κώδικα που προβάλουμε αναλόγως την Γλώσσα Προγραμματισμού. </td></tr>
-                          <tr><td>headder.js</td><td>Προσθέτουμε το κομμάτι που αφορά το  Menu και Headder τμήμα της σελίδας, μέσα από το JavaSscipr αρχείο. </td></tr>
-                          <tr><td>συντόμευση</td><td>Έχουμε μπλοκάρει την συγκεκριμένη συντόμευση από το πληκτρολόγιο<br>CTR+U<br>CTR+P<br>CTR+S</td></tr>
-                      </table>
-                      <div class="pagination" id="pagination"></div>
-                      <h2 class="highlight_black">Βασικά αρχεία</h2>
-                      <label style="margin-left: 10px;">Διάλεξε αρχείο</label>
-                      <select id="code" name="code" style="color: white; border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none; font-size: 18px; outline: none; cursor: pointer;">
-                          <option value="-">Επιλέξτε</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/more/main/create/basic.html">Η δομή της HTML</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/grcodeclub.github.io/main/js/menu/basic.js">Εισαγωγή menu</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/grcodeclub.github.io/main/js/tables/pages.js">Σελιδοποίηση Πίνακα με Δυναμικό Χρωματισμό Γραμμών</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/grcodeclub.github.io/main/js/add/data.js">Δυναμική Φόρτωση Πόρων και Ενεργοποίηση Λειτουργιών σε HTML Σελίδες</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/grcodeclub.github.io/main/js/cookies.js">Cookies</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/grcodeclub.github.io/main/js/action/dropdown-cards.js">Dropdown cards</option>
-                          <option value="https://raw.githubusercontent.com/grcodeclub/grcodeclub.github.io/main/js/action/show_code.js">Δυναμική Φόρτωση και Επισήμανση Κώδικα σε HTML</option>
-                        </select><br><br>
-                      <div class="bg_preview">
-                          <div class="appearance">
-                              <div class="space">
-                                  <div class="buttons1"></div>
-                                  <div class="buttons2"></div>
-                                  <div class="buttons3"></div>
-                              </div>
-                              <div id="name"></div>
-                          </div>
-                          <div id="load"></div>
-                      </div>
+                    <h4 style="margin: 1%; text-align: center;">
+                        Σκοπός του Create είναι να κατανοήσει ο χρήστης όλες τις λειτουργίες που έχουμε εισάγει στην ιστοσελίδα. 
+                        Επιπλέον, θέλουμε να παρουσιάσουμε πληροφορίες για το πώς ενσωματώσαμε τις λειτουργίες στην ιστοσελίδα μας.
+                    </h4>
+                            <p>
+                            Η ιστοσελίδα μας έχει δημιουργηθεί με γνώμονα την επεκτασιμότητα και τη συντηρησιμότητα. Χρησιμοποιήσαμε HTML. 
+                            Κάθε σελίδα είναι οργανωμένη με ένα καθαρό και δομημένο markup, διευκολύνοντας την προσβασιμότητα και 
+                            τη βελτιστοποίηση για τις μηχανές αναζήτησης (SEO).
+                        </p>
+                        <p>
+                            Για την προσθήκη δυναμικών στοιχείων, χρησιμοποιούμε JavaScript. Με την ανάπτυξη λειτουργιών που 
+                            φορτώνουν δυναμικά CSS και JavaScript αρχεία, μειώσαμε τον όγκο των επαναλαμβανόμενων στοιχείων σε 
+                            κάθε αρχείο HTML. Αυτή η προσέγγιση μας επιτρέπει να ανανεώνουμε κοινά στοιχεία, όπως το header, 
+                            το menu και το footer, με ένα μόνο σημείο ελέγχου.
+                        </p>
+                        <p>
+                            Η χρήση της JavaScript για την φόρτωση αρχείων μόνο όταν είναι απαραίτητο, βελτιώνει την απόδοση 
+                            της ιστοσελίδας μας. Για παράδειγμα, ελέγχουμε την ύπαρξη συγκεκριμένων στοιχείων με IDs ή classes, 
+                            και φορτώνουμε τα σχετικά JavaScript αρχεία μόνο όταν απαιτείται. Αυτό αποτρέπει την περιττή φόρτωση 
+                            κώδικα και βελτιώνει την εμπειρία του χρήστη.
+                        </p>
+                        <p>
+                            Επίσης, για την παρουσίαση του κώδικα, χρησιμοποιούμε βιβλιοθήκες όπως το Prism.js, που διευκολύνει 
+                            την ανάγνωση του κώδικα με χρωματισμό σύνταξης, ενισχύοντας την κατανόηση για τους προγραμματιστές 
+                            που επισκέπτονται την ιστοσελίδα μας.
+                        </p>
+                    <div class="bg_preview">
+                        <div class="line-numbers">
+                            <pre class="code_editor"><code class="language-html">&lt;html>
+    &lt;head>
+        &lt;meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/basic.png"/>
+        &lt;meta property="og:title" content="GrCode Club">
+        &lt;script src="https://grcodeclub.github.io/js/add/data.js"></script>
+    &lt;/head>
+    &lt;body id="create">
+        &lt;div class="container">
+            &lt;div id="add_headder_and_menu">&lt;/div>
+            &lt;div class="Text"> 
+                &lt;div class="text_bg">
+                    &lt;h1 class="title">GrCode Club&lt;/h1>
+                &lt;/div>
+            &lt;/div> 
+        &lt;/div> <!--Τέλος container-->
+        &lt;footer id="addFooter">&lt;/footer> <!-- Footer -->
+    &lt;/body>
+&lt;/html></code></pre>
+                        </div>
+                    </div>
                 </div><!-- Τέλος Background Κειμένου-->
             </div> <!--Τέλος Κειμένου-->
         </div> <!--Τέλος container-->
-               <footer id="addFooter"></footer> <!-- Footer -->
+        <footer id="addFooter"></footer> <!-- Footer -->
     </body>
 </html>
