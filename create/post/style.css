@@ -1,39 +1,45 @@
+/* Γενικές ρυθμίσεις για το body */
 body {
     font-family: Arial, sans-serif;
-    background-image: url("https://grcodeclub.gr/files-page/background/main.jpg");
+    color: #ffffff; /* Λευκό κείμενο */
 }
 
-#container {
-    display: flex;
-}
-h2,h1{
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-   
-}
-
-#input {
-    flex: 1;
-    padding: 10px;
-}
-
-#output {
-    flex: 1;
-    padding: 10px;
-}
-
+/* Στυλ για τα πεδία εισόδου */
+input[type="text"],
 textarea {
-    width: 100%;
-    height: 90vh;
-    border-radius: 10px;
-    font-size: 25px;
-    resize: none;
-    background-color: rgba(255, 255, 255, 0.413);
+    background-color: #44444400; /* Σκούρο γκρι φόντο */
+    color: #ffffff; /* Λευκό κείμενο */
+    border: 1px solid #666666; /* Σκούρο γκρι περίγραμμα */
+    border-radius: 4px; /* Στρογγυλεμένες γωνίες */
+    padding: 10px; /* Εσωτερικό περιθώριο */
+    width: calc(100% - 22px); /* Πλάτος πλήρους πλάτους, με padding */
 }
 
-iframe {
-    width: 100%;
-    height: 90vh;
-    border-radius: 10px;
+/* Στυλ για τα κουμπιά */
+.mybutton {
+    background-color: #555555; /* Σκούρο γκρι φόντο */
+    color: #ffffff; /* Λευκό κείμενο */
+    border: none; /* Καμία περίμετρος */
+    border-radius: 4px; /* Στρογγυλεμένες γωνίες */
+    padding: 10px 15px; /* Εσωτερικό περιθώριο */
+    cursor: pointer; /* Δείκτης χεριού */
+    transition: background-color 0.3s; /* Ομαλή μετάβαση χρώματος */
+}
+
+/* Στυλ για hover στα κουμπιά */
+button:hover {
+    background-color: #666666; /* Σκούρο γκρι όταν περνά ο δείκτης */
+}
+
+/* Στυλ για τα ετικέτες (labels) */
+label {
+    display: block; /* Κάνει τις ετικέτες μπλοκ στοιχείο */
+    margin-bottom: 5px; /* Κενό από κάτω */
+    color: #ffffff; /* Λευκό κείμενο */
+}
+
+/* Στυλ για διαχωριστές */
+hr {
+    border: 1px solid #666666; /* Σκούρο γκρι περίγραμμα */
+    margin: 20px 0; /* Κενό πάνω και κάτω */
 }
