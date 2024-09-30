@@ -64,7 +64,7 @@ function generateFinalHTML() {
         
         // Έλεγχος για εικόνα
         if (image && image.value.trim() !== "") {
-            itemHTML += `<img src="${image.value}" alt="Image" style="max-width: 100%; height: auto;" />`;
+            itemHTML += `<img src="${image.value}" alt="Image" style="max-width: 50%; height: auto;" />`;
         }
 
         // Αν υπάρχει περιεχόμενο για το item, το προσθέτει στον πίνακα
