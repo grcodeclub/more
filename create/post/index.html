@@ -1,9 +1,9 @@
-<html><html></html>
+<html>
     <head>
         <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/basic.png"/>
         <meta property="og:title" content="GrCode Club">
+        <link  rel="stylesheet"  href="./style.css">
         <script src="https://grcodeclub.github.io/js/add/data.js"></script>
-        <link rel="stylesheet" href="https://grcodeclub.github.io/more/create/post/style.css">
 
     </head>
 <body>
@@ -15,21 +15,24 @@
                     <div class="item">                    
                         <h1 class="title"><input type="text" class="input_title" placeholder="Εισάγετε τίτλο"/></h1>
                     </div>
-                    <select id="itemSelect">
+                    <select id="itemSelect" style="margin-left: 1%;">
                         <option value="title">Εισάγετε τίτλο</option>
                         <option value="text">Εισάγετε κείμενο</option>
-                        <option value="text">Εισάγετε Html mycode</option>
+                        <option value="mycode">Εισάγετε Html mycode</option>
                         <option value="image">Εισάγετε URL εικόνας</option>
+                        <option value="mycode_table">Table</option>
+
                     </select>
  
 </div>
-
-<button onclick="addNewItem()" class="mybutton">Προσθήκη Νέου Στοιχείου</button>
+<br>
+<button onclick="addNewItem()" class="mybutton" style="">Προσθήκη Νέου Στοιχείου</button>
 <button onclick="downloadHTML()"  class="mybutton">Κατέβασμα HTML</button>
 <a href="https://forms.gle/mbdD7DWc25f755Dj8" target="_blank" class="mybutton">Upload files</a>
 
 <script src="./create.js"></script>
 <script src="./input.js"></script>
+<script src="./AddRaw.js"></script>
 
 </div>
 </div> 

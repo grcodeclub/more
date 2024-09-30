@@ -1,5 +1,4 @@
 function addNewItem() {
-    const container = document.getElementById("inputContainer");
     const newItem = document.createElement("div");
     newItem.classList.add("item");
 
@@ -8,25 +7,35 @@ function addNewItem() {
 
     if (selectedValue === "title") {
         newItem.innerHTML = `
-          <label for="content">Εισάγετε τίτλο Ενοτητας:</label>
-            <h3 class="highlight">  <input type="text" class="unity" placeholder="Εισάγετε τίτλο Ενοτητας"/></h3>
+            <h3 class="highlight">  <input type="text" class="unity" placeholder="Εισάγετε τίτλο Ενότητας"/></h3>
             <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
     } else if (selectedValue === "text") {
         newItem.innerHTML = `
-            <label for="content">Κείμενο:</label>
             <p>  <textarea class="content" placeholder="Εισάγετε Κείμενο"/></textarea></p>
             <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
     } else if (selectedValue === "image") {
         newItem.innerHTML = `
-            <label for="image">Εικόνα (URL):</label>
-            <input type="text" class="image" placeholder="Εισάγετε URL εικόνας" />
+            <input type="text" class="image" placeholder="Εισάγετε URL Εικόνας" />
             <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
     }
     else if (selectedValue === "mycode") {
         newItem.innerHTML = `
-            <label for="image">Κωδικας</label>
-            <textarea class="mycode" placeholder="Εισάγετε Κωδικα"/></textarea>
+            <textarea class="mycode" placeholder="Εισάγετε Κωδικά Html"/></textarea>
             <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
+    }
+    else if (selectedValue === "mycode_table" && !document.querySelector('.mytable')) {
+        newItem.innerHTML = `
+            <textarea class="mytable" placeholder="Εισάγετε Table"/>
+   
+</textarea>
+           <select id="itemSelectTable" style="margin-left: 1%;">
+                        <option value="2">Στήλες 2</option>
+                        <option value="3">Στήλες 3</option>
+                        <option value="4">Στήλες 4</option>
+                    </select>
+                    <button onclick="addRawHeader(this)" id="TableHeader" class="mybutton">Add Raw Headder</button> 
+                    <button onclick="addRaw(this)" id="table_raw" class="mybutton" disabled>Add Raw</button> 
+                    <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
     }
 
     // Εύρεση του γονέα του select για να γίνει insert ακριβώς πάνω από το select

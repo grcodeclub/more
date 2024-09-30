@@ -38,6 +38,8 @@ function generateFinalHTML() {
         const image = item.querySelector(".image");
         const unity = item.querySelector(".unity");
         const mycode = item.querySelector(".mycode");
+        const mytable = item.querySelector(".mytable");
+
 
         let itemHTML = "";
 
@@ -65,6 +67,18 @@ function generateFinalHTML() {
         // Έλεγχος για εικόνα
         if (image && image.value.trim() !== "") {
             itemHTML += `<a href="${image.value}" target="_blank"><img src="${image.value}" alt="Image" style="max-width: 50%; height: auto;"/></a>`;
+        }
+
+         // Έλεγχος για εικόνα
+         if (mytable && mytable.value.trim() !== "") {
+            itemHTML += `<div>
+            <div class="search" id="search"><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div>
+<br>
+<table id="search_table_page">
+${mytable.value}
+</table>    
+<div class="pagination" id="pagination"></div>
+</div>`;
         }
 
         // Αν υπάρχει περιεχόμενο για το item, το προσθέτει στον πίνακα

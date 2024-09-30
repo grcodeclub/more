@@ -5,30 +5,49 @@ body {
 }
 
 /* Στυλ για τα πεδία εισόδου */
-input[type="text"],
-textarea {
+input[type="text"] {
     background-color: #44444400; /* Σκούρο γκρι φόντο */
     color: #ffffff; /* Λευκό κείμενο */
-    border: 1px solid #666666; /* Σκούρο γκρι περίγραμμα */
+    border: 1px solid #66666600; /* Σκούρο γκρι περίγραμμα */
     border-radius: 4px; /* Στρογγυλεμένες γωνίες */
     padding: 10px; /* Εσωτερικό περιθώριο */
     width: calc(100% - 22px); /* Πλάτος πλήρους πλάτους, με padding */
+    font-size: 18px;
+}
+
+textarea {
+    background-color: #44444400; /* Σκούρο γκρι φόντο */
+    color: #ffffff; /* Λευκό κείμενο */
+    border: 1px solid #66666600; /* Σκούρο γκρι περίγραμμα */
+    border-radius: 4px; /* Στρογγυλεμένες γωνίες */
+    padding: 10px; /* Εσωτερικό περιθώριο */
+    width: calc(100% - 22px); /* Πλάτος πλήρους πλάτους, με padding */
+    white-space: nowrap;
+    overflow-wrap: normal;
+    overflow-x: auto;
+    height: 300px;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none; /* Απόκρυψη του στοιχείου */
 }
 
 /* Στυλ για τα κουμπιά */
 .mybutton {
-    background-color: #555555; /* Σκούρο γκρι φόντο */
+    background-color: #504e4e; /* Σκούρο γκρι φόντο */
     color: #ffffff; /* Λευκό κείμενο */
     border: none; /* Καμία περίμετρος */
     border-radius: 4px; /* Στρογγυλεμένες γωνίες */
     padding: 10px 15px; /* Εσωτερικό περιθώριο */
+    margin-left: 1%;
     cursor: pointer; /* Δείκτης χεριού */
     transition: background-color 0.3s; /* Ομαλή μετάβαση χρώματος */
 }
 
 /* Στυλ για hover στα κουμπιά */
-button:hover {
-    background-color: #666666; /* Σκούρο γκρι όταν περνά ο δείκτης */
+.mybutton:hover {
+    background-color: #000000; /* Σκούρο γκρι όταν περνά ο δείκτης */
 }
 
 /* Στυλ για τα ετικέτες (labels) */
@@ -43,3 +62,12 @@ hr {
     border: 1px solid #666666; /* Σκούρο γκρι περίγραμμα */
     margin: 20px 0; /* Κενό πάνω και κάτω */
 }
+
+.mybutton:disabled {
+    opacity: 0.6; /* Μειωμένη διαφάνεια για κουμπιά που είναι disabled */
+    background-color: black; /* Μαύρο χρώμα φόντου */
+
+
+}
+
+
