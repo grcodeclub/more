@@ -60,7 +60,7 @@ function generateFinalHTML() {
     const items = document.querySelectorAll(".item");
     
     items.forEach(item => {
-        const title = item.querySelector(".title");
+        const title = item.querySelector(".input_title");
         const content = item.querySelector(".content").value;
         const image = item.querySelector(".image").value;
         const unity = item.querySelector(".unity").value;
