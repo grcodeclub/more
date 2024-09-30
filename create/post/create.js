@@ -10,7 +10,6 @@ function downloadHTML() {
 }
 
 function generateFinalHTML() {
-    // Η υπάρχουσα λογική για να δημιουργήσεις το HTML
     let htmlContent = 
 `<html>
 <head>
@@ -35,24 +34,40 @@ function generateFinalHTML() {
     
     items.forEach(item => {
         const title = item.querySelector(".input_title");
-        const content = item.querySelector(".content").value;
-        const image = item.querySelector(".image").value;
-        const unity = item.querySelector(".unity").value;
+        const content = item.querySelector(".content");
+        const image = item.querySelector(".image");
+        const unity = item.querySelector(".unity");
+        const mycode = item.querySelector(".mycode");
 
         let itemHTML = "";
-    
+
+        // Έλεγχος για τίτλο
         if (title) {
             itemHTML += `<h1 class="title">${title.value}</h1>`;
         }
+
+        // Έλεγχος για μονάδα (unity)
         if (unity) {
-            itemHTML += `<h3 class="highlight">${unity}</h3>`;
+            itemHTML += `<h3 class="highlight">${unity.value}</h3>`;
         }
-        if (content) {
-            itemHTML += `<p>${content}</p>`;
+        
+        // Έλεγχος για κείμενο
+        if (content && content.value.trim() !== "") {
+            itemHTML += `<p>${content.value}</p>`;
         }
-        if (image) {
-            itemHTML += `<img src="${image}" alt="Image" style="max-width: 100%; height: auto;" />`;
+
+          // Έλεγχος για κείμενο
+          if (mycode && mycode.value.trim() !== "") {
+            itemHTML += `<div>${mycode.value}</div>`;
         }
+        
+        
+        // Έλεγχος για εικόνα
+        if (image && image.value.trim() !== "") {
+            itemHTML += `<img src="${image.value}" alt="Image" style="max-width: 100%; height: auto;" />`;
+        }
+
+        // Αν υπάρχει περιεχόμενο για το item, το προσθέτει στον πίνακα
         if (itemHTML) {
             htmlContentArray.push(itemHTML);
         }
@@ -66,4 +81,3 @@ function generateFinalHTML() {
 
     return finalHTML; // Επιστρέφει το παραγόμενο HTML
 }
-
