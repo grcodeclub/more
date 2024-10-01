@@ -4,30 +4,41 @@ let rows1 = []; // Αρχικοποίηση των γραμμών του πίν�
 const table1 = document.getElementById('search_table_page_1');
 const headerRow = table1.querySelector('#title-table');
 
-const filePath = 'data.txt'; // Ορισμός του path πριν το try
+const filePaths = ['./data/1.txt']; // Πίνακας με τα paths των αρχείων
 
 // Χρήση fetch για φόρτωση του αρχείου
-fetch(filePath)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Σφάλμα φόρτωσης αρχείου: ' + response.statusText);
-        }
-        return response.text();
-    })
-    .then(htmlData => {
-        table1.insertAdjacentHTML('beforeend', htmlData); // Εισαγωγή HTML στο τέλος του πίνακα
-        rows1 = table1.querySelectorAll('tr'); // Ενημέρωση των γραμμών μετά την προσθήκη
-        displayTable(currentPage); // Κλήση της displayTable για αρχική εμφάνιση
-    })
-    .catch(error => {
-        console.error('Σφάλμα φόρτωσης δεδομένων:', error);
+function loadData() {
+    const fetchPromises = filePaths.map(filePath => {
+        return fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Σφάλμα φόρτωσης αρχείου: ' + response.statusText);
+                }
+                return response.text();
+            });
     });
+
+    Promise.all(fetchPromises)
+        .then(htmlDataArray => {
+            htmlDataArray.forEach(htmlData => {
+                table1.insertAdjacentHTML('beforeend', htmlData); // Εισαγωγή HTML στο τέλος του πίνακα
+            });
+            rows1 = table1.querySelectorAll('tr'); // Ενημέρωση των γραμμών μετά την προσθήκη
+            displayTable(currentPage); // Κλήση της displayTable για αρχική εμφάνιση
+        })
+        .catch(error => {
+            console.error('Σφάλμα φόρτωσης δεδομένων:', error);
+        });
+}
+
+
 
 function displayTable(page) {
     const start = (page - 1) * itemsPerPage + 1; // +1 για να παρακάμψουμε τη γραμμή επικεφαλίδας
     const end = start + itemsPerPage;
-    const tableBody = document.querySelector('#search_table_page_1 ');
-    tableBody.innerHTML = '';
+    const tableBody = document.querySelector('#search_table_page_1 '); // Αποκτήστε το 
+
+    tableBody.innerHTML = ''; // Καθαρίστε το τρέχον περιεχόμενο
 
     // Προσθήκη γραμμής επικεφαλίδας
     if (headerRow) {
@@ -44,7 +55,8 @@ function displayTable(page) {
     displayPagination();
 }
 
-function fullTable() {
+// Αναζητήστε και εμφανίστε τα δεδομένα από το τρέχον αρχείο
+function fullTable(searchTerm) {
     const tableBody = document.querySelector('#search_table_page_1 ');
     tableBody.innerHTML = '';
 
@@ -53,15 +65,10 @@ function fullTable() {
         tableBody.appendChild(headerRow.cloneNode(true));
     }
 
-    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-
     rows1.forEach(row => {
         if (row === headerRow) return; // Skip header row
 
-        // Get cells from the row
         const cells = row.querySelectorAll('td');
-
-        // Check if at least one of the specified columns contains the search term
         const column1Match = cells[0].textContent.toLowerCase().includes(searchTerm);
 
         if (column1Match) {
@@ -69,10 +76,10 @@ function fullTable() {
         }
     });
 
-    applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
+    applyRowColors(); // Εφαρμογή χρωματισμού
 }
 
-function fullTable1() {
+function fullTable1(searchTerm) {
     const tableBody = document.querySelector('#search_table_page_1 ');
     tableBody.innerHTML = '';
 
@@ -81,15 +88,10 @@ function fullTable1() {
         tableBody.appendChild(headerRow.cloneNode(true));
     }
 
-    const searchTerm = document.getElementById('searchInput2').value.trim().toLowerCase();
-
     rows1.forEach(row => {
         if (row === headerRow) return; // Skip header row
 
-        // Get cells from the row
         const cells = row.querySelectorAll('td');
-
-        // Check if at least one of the specified columns contains the search term
         const column1Match = cells[1].textContent.toLowerCase().includes(searchTerm);
 
         if (column1Match) {
@@ -97,10 +99,10 @@ function fullTable1() {
         }
     });
 
-    applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
+    applyRowColors(); // Εφαρμογή χρωματισμού
 }
 
-function fullTable2() {
+function fullTable2(searchTerm) {
     const tableBody = document.querySelector('#search_table_page_1 ');
     tableBody.innerHTML = '';
 
@@ -109,15 +111,10 @@ function fullTable2() {
         tableBody.appendChild(headerRow.cloneNode(true));
     }
 
-    const searchTerm = document.getElementById('searchInput3').value.trim().toLowerCase();
-
     rows1.forEach(row => {
         if (row === headerRow) return; // Skip header row
 
-        // Get cells from the row
         const cells = row.querySelectorAll('td');
-
-        // Check if at least one of the specified columns contains the search term
         const column1Match = cells[2].textContent.toLowerCase().includes(searchTerm);
 
         if (column1Match) {
@@ -125,7 +122,7 @@ function fullTable2() {
         }
     });
 
-    applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
+    applyRowColors(); // Εφαρμογή χρωματισμού
 }
 
 function displayPagination() {
@@ -174,19 +171,38 @@ function applyRowColors() {
 
 function checkAndDisplayTable() {
     const searchInput = document.getElementById('searchInput');
-    
-    if (searchInput.value.trim() !== '') {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    if (searchTerm !== '') {
         // Εμφάνιση πλήρους πίνακα όταν το input αναζήτησης έχει περιεχόμενο
-        fullTable();
-        searchInput.style.display = 'block';
+        fullTable(searchTerm);
         const pagination = document.getElementById('pagination');
         pagination.style.display = 'none';
     } else {
         // Επαναφορά της σελιδοποίησης
         displayTable(currentPage);
-        searchInput.style.display = 'block';
         const pagination = document.getElementById('pagination');
         pagination.style.display = 'block';
+    }
+}
+
+function checkAndDisplayTable1() {
+    const searchInput2 = document.getElementById('searchInput2');
+    const searchTerm = searchInput2.value.trim().toLowerCase();
+    if (searchTerm !== '') {
+        fullTable1(searchTerm);
+    } else {
+        displayTable(currentPage);
+    }
+}
+
+function checkAndDisplayTable2() {
+    const searchInput3 = document.getElementById('searchInput3');
+    const searchTerm = searchInput3.value.trim().toLowerCase();
+    if (searchTerm !== '') {
+        fullTable2(searchTerm);
+    } else {
+        displayTable(currentPage);
     }
 }
 
@@ -195,10 +211,10 @@ const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', checkAndDisplayTable);
 
 const searchInput2 = document.getElementById('searchInput2');
-searchInput2.addEventListener('input', checkAndDisplayTable1);  
+searchInput2.addEventListener('input', checkAndDisplayTable1);
 
 const searchInput3 = document.getElementById('searchInput3');
-searchInput3.addEventListener('input', checkAndDisplayTable2);  
+searchInput3.addEventListener('input', checkAndDisplayTable2);
 
 // Αρχική εμφάνιση του πίνακα
-checkAndDisplayTable();
+loadData();
