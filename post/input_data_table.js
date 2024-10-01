@@ -1,7 +1,7 @@
 const itemsPerPage = 15;
 let currentPage = 1;
 let rows1 = []; // Αρχικοποίηση των γραμμών του πίνακα
-const table1 = document.getElementById('search_table_page_1');
+const table1 = document.getElementById('table_post');
 const headerRow = table1.querySelector('#title-table');
 
 const filePaths = ['./data/1.txt']; // Πίνακας με τα paths των αρχείων
@@ -36,7 +36,7 @@ function loadData() {
 function displayTable(page) {
     const start = (page - 1) * itemsPerPage + 1; // +1 για να παρακάμψουμε τη γραμμή επικεφαλίδας
     const end = start + itemsPerPage;
-    const tableBody = document.querySelector('#search_table_page_1 '); // Αποκτήστε το 
+    const tableBody = document.querySelector('#table_post '); // Αποκτήστε το 
 
     tableBody.innerHTML = ''; // Καθαρίστε το τρέχον περιεχόμενο
 
@@ -57,7 +57,7 @@ function displayTable(page) {
 
 // Αναζητήστε και εμφανίστε τα δεδομένα από το τρέχον αρχείο
 function fullTable(searchTerm) {
-    const tableBody = document.querySelector('#search_table_page_1 ');
+    const tableBody = document.querySelector('#table_post ');
     tableBody.innerHTML = '';
 
     // Προσθήκη γραμμής επικεφαλίδας
@@ -80,7 +80,7 @@ function fullTable(searchTerm) {
 }
 
 function fullTable1(searchTerm) {
-    const tableBody = document.querySelector('#search_table_page_1 ');
+    const tableBody = document.querySelector('#table_post ');
     tableBody.innerHTML = '';
 
     // Προσθήκη γραμμής επικεφαλίδας
@@ -103,7 +103,7 @@ function fullTable1(searchTerm) {
 }
 
 function fullTable2(searchTerm) {
-    const tableBody = document.querySelector('#search_table_page_1 ');
+    const tableBody = document.querySelector('#table_post ');
     tableBody.innerHTML = '';
 
     // Προσθήκη γραμμής επικεφαλίδας
@@ -160,7 +160,7 @@ function displayPagination() {
 }
 
 function applyRowColors() {
-    const tableRows = document.querySelectorAll('#search_table_page_1  tr:not(tr[id="title-table"])'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
+    const tableRows = document.querySelectorAll('#table_post  tr:not(tr[id="title-table"])'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
 
     tableRows.forEach((row, index) => {
         if (index % 2 === 0) {
