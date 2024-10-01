@@ -38,6 +38,17 @@ function addNewItem() {
                     <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
     }
 
+    else if (selectedValue === "programming") {
+        newItem.innerHTML = `
+             <select id="itemSelectLanguage" style="margin-left: 1%;">
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="python">Python</option>
+                    </select>
+            <textarea class="programming" placeholder="Εισάγετε Κωδικά "/></textarea>
+            <button onclick="removeItem(this)" class="mybutton">Αφαίρεση</button><br><br>`;
+    }
+
     // Εύρεση του γονέα του select για να γίνει insert ακριβώς πάνω από το select
     const parentElement = selectElement.parentElement;
     parentElement.insertBefore(newItem, selectElement);

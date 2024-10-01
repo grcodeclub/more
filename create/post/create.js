@@ -39,6 +39,8 @@ function generateFinalHTML() {
         const unity = item.querySelector(".unity");
         const mycode = item.querySelector(".mycode");
         const mytable = item.querySelector(".mytable");
+        const programming = item.querySelector(".programming");
+        const selectedValue = document.getElementById("itemSelectLanguage");
 
 
         let itemHTML = "";
@@ -53,6 +55,15 @@ function generateFinalHTML() {
             itemHTML += `<h3 class="highlight">${unity.value}</h3>`;
         }
         
+        if (selectedValue && programming) {
+            // Αν υπάρχει το στοιχείο και έχει τιμή
+            itemHTML += `
+            <div class="bg_preview"><div class="line-numbers">
+            <pre class="code_editor"><code class="language-${selectedValue.value}">${programming.value}</code></pre></div></div>`;
+        } else {
+            console.error("Το στοιχείο itemSelectLanguage δεν υπάρχει ή δεν έχει επιλεχθεί τιμή.");
+        }
+
         // Έλεγχος για κείμενο
         if (content && content.value.trim() !== "") {
             itemHTML += `<p>${content.value}</p>`;
