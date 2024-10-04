@@ -1,40 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
-    <title>404-GrCode Club</title>
-    <link rel='icon' type='image/png' href='https://grcodeclub.github.io/files-page/logo/favicon.ico'>
-    <link rel="stylesheet" href="https://grcodeclub.github.io/css/bg.css">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
-
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="GrCode Club | Docker">
+    <title>GrCode Club - 400 Bad Request</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
     <style>
-           .hero {
-        color: #fff;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .hero a{color: #fff;}
-
-    .hero h1 {
-        font-size: 120px;
-        margin-bottom: 10px; /* Μείωση του κάτω περιθωρίου */
-
-    }
-
-    .hero p {padding: auto;}
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+        }
+        .error-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .error-container:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            font-size: 6rem;
+            color: #dc3545; /* Bootstrap danger color */
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+            color: #343a40; /* Dark color for the subtitle */
+        }
+        p {
+            font-size: 1.25rem;
+            color: #6c757d; /* Bootstrap muted color */
+        }
+        .btn {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+        }
+        .footer {
+            margin-top: 50px;
+            color: #6c757d; /* Bootstrap muted color */
+        }
     </style>
 </head>
 <body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <div class="error-container">
+            <h1>400</h1>
+            <h3>Η σελίδα δεν βρέθηκε😞</h3>
+            <p>Παρακαλώ ελέγξτε τη διεύθυνση URL και προσπαθήστε ξανά.</p>
+            <a href="https://grcodeclub.gr/" class="btn btn-dark">Πίσω στην Αρχική Σελίδα</a>
+        </div>
+    </div>
+    <footer class="footer text-center">
+        <p>&copy; 2024 GrCode Club. Όλα τα δικαιώματα διατηρούνται.</p>
+    </footer>
 
-    
-    <section class="hero">
-        <h1 style="font-size: 220px;">404</h1>
-        <p>Συγγνώμη, η σελίδα που ψάχνεις δεν βρέθηκε.</p>
-    <p>Επιστροφή στην <a href="https://grcodeclub.gr">Αρχική Σελίδα</a>.</p>
-    </section>
-    
-    
-<footer><div><div class="wave"></div><div class="wave"></div><div class="wave"></div></div></footer>
 </body>
 </html>
